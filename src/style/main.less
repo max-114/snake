@@ -1,0 +1,108 @@
+// 设置主窗口样式
+.main {
+  width: 560px;
+  height: 420px;
+  margin: 100px auto;
+  background-color: @bg-color;
+  border: 10px solid @bd-color;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .main-function {
+    width: 560px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 5px solid @bd-color;
+    padding: 0 20px 14px 20px;
+    // 菜单样式
+    .menu {
+      width: 130px;
+      height: 300px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: space-around;
+      align-self: center;
+      & > button {
+        width: 130px;
+        height: 60px;
+        border: 5px solid @bd-color;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+    // 游戏舞台
+    .stage {
+      width: 304px;
+      height: 304px;
+      border: 2px solid @bd-color;
+      position: relative;
+      // 设置蛇的样式
+      .snake {
+        & > div {
+          width: 10px;
+          height: 10px;
+          background-color: @snake-color;
+          position: absolute;
+        }
+      }
+      .food {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 60px;
+        top: 100px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        & > div {
+          width: 4px;
+          height: 4px;
+          background-color: @food-color;
+          transform: rotate(45deg);
+        }
+      }
+      // 失败界面样式
+      .game-over {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -50px -125px;
+        width: 250px;
+        height: 100px;
+        background-color: @bg-color;
+        border: 5px solid @bd-color;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        .over-option {
+          margin-top: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .restart,
+          .quit {
+            text-align: center;
+            width: 100px;
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  // 记分牌
+  .score-panel {
+    width: 560px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

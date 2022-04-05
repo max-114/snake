@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+</head>
+
+<body>
+    <!-- 创建游戏主容器 -->
+    <div id="main" class="main">
+        <div id="main-function" class="main-function">
+            <!-- 菜单界面 -->
+            <div id="menu" class="menu">
+                <button id="start">play</button>
+                <button id="settings">settings</button>
+            </div>
+            <!-- 设置游戏舞台 -->
+            <div id="stage" class="stage">
+                <!-- 设置蛇 -->
+                <div id="snake" class="snake">
+                    <!-- snake内部的div，表示蛇的各部分 -->
+                    <div></div>
+                </div>
+                <!-- 设置食物 -->
+                <div id="food" class="food">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- 失败界面 -->
+                <div id="game-over" class="game-over">
+                    <span id="message">Game Over!!</span>
+                    <div id="over-option" class="over-option">
+                        <div id="restart" class="restart">reatart</div>
+                        <div id="quit" class="quit">quit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 设置游戏记分牌 -->
+        <div id="score-panel" class="score-panel">
+            <div>RECORD:<span id="record">0</span></div>
+            <div>SCORE:<span id="score">0</span></div>
+            <div>LEVEL:<span id="level">1</span></div>
+        </div>
+    </div>
+
+    <!-- 设置界面 -->
+    <div class="config-container" id="config-contaner">
+        <div class="config">
+            <button id="close-config" class="close iconfont">&#xe601;</button>
+            <div id="reset-record" class="reset-record">
+                <span>record:</span>
+                <button class="config-btn">reset</button>
+            </div>
+            <div id="set-speed" class="set-speed">
+                <span id="speed">speed:</span>
+                <button id="speed-up" class="config-btn iconfont">&#xe600;</button>
+                <button id="speed-down" class="config-btn iconfont">&#xe644;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导引界面 -->
+    <!-- <div id="guid" class="guid">
+        <div>control：↑ ↓ ← →</div>
+        <div>pause:any button</div>
+        <div>resume：↑ ↓ ← →</div>
+    </div> -->
+</body>
+
+</html>

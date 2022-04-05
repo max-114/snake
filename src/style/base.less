@@ -1,0 +1,24 @@
+// 清除默认样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: bold 20px 'Courier';
+  color: @font-color;
+}
+
+button {
+  font: bold 20px 'Courier';
+  color: @font-color;
+  background-color: @bg-color;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s linear 0s;
+}

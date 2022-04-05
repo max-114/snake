@@ -1,0 +1,44 @@
+// 设置界面
+.config-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(221, 221, 221, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  .config {
+    width: 330px;
+    min-width: 330px;
+    height: 210px;
+    padding: 0 0 0 20px;
+    background-color: @bg-color;
+    border: 10px solid @bd-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px;
+    position: relative;
+    .close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      border: none;
+    }
+    & > div {
+      width: 230px;
+      align-self: center;
+      text-align: left;
+    }
+    .config-btn {
+      padding: 6px 6px;
+      border: 3px solid @bd-color;
+      border-radius: 10px;
+    }
+  }
+}
